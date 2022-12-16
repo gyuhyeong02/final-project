@@ -27,3 +27,29 @@ Brain tumors are classified as : Benign Tumor, Malignant Tumor, Pituitary Tumor,
 > 
 > pituitary_tumor
 
+### KNeighborsClassifier
+
+I chose ***KNeighborsClassifier*** to classify above training dataset.
+
+> ***KNeighborsClassifier*** is the classifier algorithm that classifying the test data by calulating the closest k training data and labeling with the most frequent label among them.
+
+Then, I used ***GridSearchCV*** to find out the best parameters as follow:
+
+
+    parameters = {'n_neighbors' : [3, 5, 7], 'weights' : ('uniform', 'distance'), 'p' : [1, 2]}
+
+
+After I got the best parameters form ***GridSearchCV***, I classified the training dataset with:
+
+
+    KNeighborsClassifier( n_neighbors = 3, weights = 'distance', p = 1, n_jobs = -1)
+
+
+### Explanation of parameters
+
+* n_neighbors
+
+  The number of neighbors to be calulated. (Also means 'K' at the KNeighborsClassifier)
+  
+ * p
+   
