@@ -1,6 +1,8 @@
 # Final-Project
 Classification of brain tumor
 
+
+
 ### Install
 You need scikit-learn and scikit-image 
 
@@ -15,10 +17,13 @@ You need scikit-learn and scikit-image
       $ pip install scikit-image --user
 
 
+
 ### Training dataset
+
 Brain tumors are classified as : Benign Tumor, Malignant Tumor, Pituitary Tumor, etc.
 
 ***Training*** folder consists of 4 folders which contain MRI images of their cases :
+
 > glioma_tumor
 > 
 > meningioma_tumor
@@ -26,6 +31,7 @@ Brain tumors are classified as : Benign Tumor, Malignant Tumor, Pituitary Tumor,
 > no_tumor
 > 
 > pituitary_tumor
+
 
 ### KNeighborsClassifier
 
@@ -45,11 +51,18 @@ After I got the best parameters form ***GridSearchCV***, I classified the traini
     KNeighborsClassifier( n_neighbors = 3, weights = 'distance', p = 1, n_jobs = -1)
 
 
+
 ### Explanation of parameters
 
-* n_neighbors
-
+* **n_neighbors** : int, default=5
+  
   The number of neighbors to be calulated. (Also means 'K' at the KNeighborsClassifier)
   
- * p
+ * **weights** : {‘uniform’, ‘distance’}, callable or None, default=’uniform’
+   
+   Weight function used in prediction.
+   
+   ‘uniform’ : uniform weights. All points in each neighborhood are weighted equally.
+   
+   distance’ : weight points by the inverse of their distance. in this case, closer neighbors of a query point will have a greater influence than neighbors which are further away.
    
