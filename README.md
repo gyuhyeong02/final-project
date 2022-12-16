@@ -4,15 +4,15 @@ Classification of brain tumor
 ### Install
 You need scikit-learn and scikit-image 
 
-Install the latest version of scikit-learn
+* Install the latest version of scikit-learn
 
 
-    $ pip install scikit-learn --user
+      $ pip install scikit-learn --user
 
-Install the latest version of scikit-image
+* Install the latest version of scikit-image
 
 
-    $ pip install scikit-image --user
+      $ pip install scikit-image --user
 
 
 ### Training dataset
