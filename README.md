@@ -63,11 +63,12 @@ After I got the best parameters form ***GridSearchCV***, I classified the traini
 * **weights** : {‘uniform’, ‘distance’}, callable or None, default=’uniform’
    
   Since there are 4 labels, 'distance' would be better for multiclass classifying.
-  
+  When you use 'distance', closer neighbors of a query point will have a greater influence than neighbors which are further away.
 
 * **p** : int, default=2
 
    Since I modified the value of 'p' with 1, it uses the 'manhattan distance'.
+   When you use 'manhattan distance', the distance between two points is the sum of the absolute differences of their Cartesian coordinates.
 
 * **n_jobs** : int, default=None
 
