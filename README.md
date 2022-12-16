@@ -3,7 +3,7 @@ Classification of brain tumor
 
 
 
-### Install
+### 1. Install
 You need scikit-learn and scikit-image 
 
 * Install the latest version of scikit-learn
@@ -18,7 +18,7 @@ You need scikit-learn and scikit-image
 
 
 
-### Training dataset
+### 2. Training dataset
 
 Brain tumors are classified as : Benign Tumor, Malignant Tumor, Pituitary Tumor, etc.
 
@@ -33,7 +33,7 @@ Brain tumors are classified as : Benign Tumor, Malignant Tumor, Pituitary Tumor,
 > pituitary_tumor
 
 
-### KNeighborsClassifier
+### 3. KNeighborsClassifier
 
 I chose ***KNeighborsClassifier*** to classify above training dataset.
 
@@ -52,7 +52,7 @@ After I got the best parameters form ***GridSearchCV***, I classified the traini
 
 
 
-### [Explanation of parameters](https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KNeighborsClassifier.html#sklearn.neighbors.KNeighborsClassifier.kneighbors)
+### 4. [Explanation of parameters](https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KNeighborsClassifier.html#sklearn.neighbors.KNeighborsClassifier.kneighbors)
 
 
 * **n_neighbors** : int, default=5
