@@ -52,17 +52,23 @@ After I got the best parameters form ***GridSearchCV***, I classified the traini
 
 
 
-### Explanation of parameters
+### [Explanation of parameters](https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KNeighborsClassifier.html#sklearn.neighbors.KNeighborsClassifier.kneighbors)
+
 
 * **n_neighbors** : int, default=5
+
+  I modified it with 3 that means it will see the closest 3 training data for test data
   
-  The number of neighbors to be calulated. (Also means 'K' at the KNeighborsClassifier)
   
- * **weights** : {‘uniform’, ‘distance’}, callable or None, default=’uniform’
+* **weights** : {‘uniform’, ‘distance’}, callable or None, default=’uniform’
    
-   Weight function used in prediction.
-   
-   ‘uniform’ : uniform weights. All points in each neighborhood are weighted equally.
-   
-   distance’ : weight points by the inverse of their distance. in this case, closer neighbors of a query point will have a greater influence than neighbors which are further away.
-   
+  Since there are 4 labels, 'distance' would be better for multiclass classifying.
+  
+
+* **p** : int, default=2
+
+   Since I modified the value of 'p' with 1, it uses the 'manhattan distance'.
+
+* **n_jobs** : int, default=None
+
+  'n_jobs = -1' means using all processors 
