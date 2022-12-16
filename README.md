@@ -57,7 +57,7 @@ After I got the best parameters form ***GridSearchCV***, I classified the traini
 
 * **n_neighbors** : int, default=5
 
-  I modified it with 3 that means it will see the closest 3 training data for test data
+  I modified it with 3 that means it will see the closest 3 training data for each test data.
   
   
 * **weights** : {‘uniform’, ‘distance’}, callable or None, default=’uniform’
