@@ -55,21 +55,21 @@ After I got the best parameters form ***GridSearchCV***, I classified the traini
 ### 4. [Explanation of parameters](https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KNeighborsClassifier.html#sklearn.neighbors.KNeighborsClassifier.kneighbors)
 
 
-* **n_neighbors** : int, default=5
+* **n_neighbors** : *int, default=5*
 
   I modified it with 3 that means it will see the closest 3 training data for each test data.
   
   
-* **weights** : {‘uniform’, ‘distance’}, callable or None, default=’uniform’
+* **weights** : *{‘uniform’, ‘distance’}, callable or None, default=’uniform’*
    
   Since there are 4 labels, 'distance' would be better for multiclass classifying.
   When you use 'distance', closer neighbors of a query point will have a greater influence than neighbors which are further away.
 
-* **p** : int, default=2
+* **p** : *int, default=2*
 
    Since I modified the value of 'p' with 1, it uses the 'manhattan distance'.
    When you use 'manhattan distance', the distance between two points is the sum of the absolute differences of their Cartesian coordinates.
 
-* **n_jobs** : int, default=None
+* **n_jobs** : *int, default=None*
 
   'n_jobs = -1' means using all processors 
