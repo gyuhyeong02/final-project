@@ -48,19 +48,28 @@ Then, I used ***GridSearchCV*** to find out the best parameters as follow:
 After I got the best parameters form ***GridSearchCV***, I classified the training dataset with them:
 
 
-    #To use train data more, I defined the test size with 0.1
-    X_train, X_test, y_train, y_test = sklearn.model_selection.train_test_split(X, y, test_size=0.1, random_state=42)
+* To use train data more, I defined the test size with 0.1
     
-    #Standardize with StandardScaler
-    scaler = sklearn.preprocessing.StandardScaler()
-    X_train_scaled = scaler.fit_transform(X_train)
-    X_test_scaled = scaler.transform(X_test)
     
-    #Classification
-    rf = sklearn.neighbors.KNeighborsClassifier( n_neighbors = 3, p = 1, weights = 'distance', n_jobs = -1)
-    rf.fit(X_train_scaled, y_train)
-    y_pred = rf.predict(X_test_scaled)
+      X_train, X_test, y_train, y_test = sklearn.model_selection.train_test_split(X, y, test_size=0.1, random_state=42)
     
+* Standardize with StandardScaler
+    
+      scaler = sklearn.preprocessing.StandardScaler()
+      X_train_scaled = scaler.fit_transform(X_train)
+      X_test_scaled = scaler.transform(X_test)
+    
+* Training
+
+      rf = sklearn.neighbors.KNeighborsClassifier( n_neighbors = 3, p = 1, weights = 'distance', n_jobs = -1)
+      rf.fit(X_train_scaled, y_train)
+    
+* Check Accuracy
+      
+      y_pred = rf.predict(X_test_scaled)
+      print('Accuracy: %.2f' % sklearn.metrics.accuracy_score(y_test, y_pred))
+
+  Accuracy was 0.87
 
 
 ### 4. [Explanation of parameters](https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KNeighborsClassifier.html#sklearn.neighbors.KNeighborsClassifier.kneighbors)
