@@ -17,6 +17,7 @@ Install the latest version of scikit-image
 
 ### Training dataset
 Brain tumors are classified as : Benign Tumor, Malignant Tumor, Pituitary Tumor, etc.
+
 ***Training*** folder consists of 4 folders which contain MRI images of their cases :
 > glioma_tumor
 > 
