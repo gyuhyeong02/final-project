@@ -69,7 +69,7 @@ After I got the best parameters form ***GridSearchCV***, I classified the traini
       y_pred = rf.predict(X_test_scaled)
       print('Accuracy: %.2f' % sklearn.metrics.accuracy_score(y_test, y_pred))
 
-  Accuracy was 0.87
+* Printed out accuracy was 0.87
 
 
 ### 4. [Explanation of parameters](https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KNeighborsClassifier.html#sklearn.neighbors.KNeighborsClassifier.kneighbors)
